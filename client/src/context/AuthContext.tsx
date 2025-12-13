@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import type { ReactNode } from 'react';
 import api from '../utils/api';
-import { User, AuthResponse } from '../types';
+import type { User, AuthResponse } from '../types/index.js';
 import { hashPassword, generateSalt, deriveKey } from '../utils/crypto';
 
 interface AuthContextType {

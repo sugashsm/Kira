@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Plus, Search, LogOut, Key, Eye, EyeOff, Copy, Trash2, Edit, Star } from 'lucide-react';
+import { Plus, Search, LogOut, Key, Eye, EyeOff, Copy, Trash2 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import api from '../utils/api';
 import { encryptData, decryptData } from '../utils/crypto';
-import { Password, DecryptedPassword, PasswordResponse } from '../types';
+import type { Password, DecryptedPassword, PasswordResponse } from '../types/index.js';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import Modal from '../components/Modal';
-import { generatePassword, PasswordGeneratorOptions } from '../utils/passwordGenerator';
+import { generatePassword } from '../utils/passwordGenerator';
+import type { PasswordGeneratorOptions } from '../utils/passwordGenerator';
 
 const Vault: React.FC = () => {
     const { user, logout, encryptionKey } = useAuth();
