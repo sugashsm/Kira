@@ -1,0 +1,17 @@
+{
+    "ts-node": {
+        "transpileOnly": true,
+        "files": true,
+        "compilerOptions": {
+            "module": "commonjs"
+        }
+    },
+    "watch": [
+        "src"
+    ],
+    "ext": "ts,json",
+    "ignore": [
+        "src/**/*.spec.ts"
+    ],
+    "exec": "ts-node src/server.ts"
+}

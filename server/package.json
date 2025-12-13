@@ -1,12 +1,19 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "KIRA Password Manager Backend",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec ts-node -T src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "type-check": "tsc --noEmit"
   },
-  "keywords": [],
+  "keywords": [
+    "password-manager",
+    "security",
+    "encryption"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
