@@ -213,26 +213,7 @@ npm run start      # Run production server
 npm run type-check # Check TypeScript types
 ```
 
----
 
-## 🚢 Deployment
-
-### Frontend (Vercel/Netlify)
-1. Build the frontend: `cd client && npm run build`
-2. Deploy the `dist` folder
-3. Set environment variable: `VITE_API_URL=https://your-api-domain.com/api`
-
-### Backend (Heroku/Railway/DigitalOcean)
-1. Set environment variables (PORT, MONGODB_URI, JWT_SECRET, etc.)
-2. Ensure MongoDB is accessible
-3. Deploy with: `npm run build && npm start`
-
-### Important
-- ⚠️ **HTTPS Required** - Always use HTTPS in production
-- ⚠️ **Change JWT_SECRET** - Use a strong, random secret
-- ⚠️ **Secure MongoDB** - Use strong credentials and whitelist IPs
-
----
 
 ## 📊 Database Schema
 
