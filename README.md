@@ -255,17 +255,6 @@ Contributions are welcome! Please follow these steps:
 
 ---
 
-## 📝 License
-
-This project is licensed under the ISC License.
-
----
-
-## ⚠️ Disclaimer
-
-This is a personal project for educational purposes. While security best practices have been implemented, use at your own risk. Always keep backups of important passwords.
-
----
 
 ## 🙏 Acknowledgments
 
