@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+  root: './',
   plugins: [react()],
   esbuild: {
     // Prevent eval usage that causes CSP errors
