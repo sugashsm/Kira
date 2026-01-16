@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Mail, Lock, Sparkles, Shield } from 'lucide-react';
+import { Mail, Lock, Shield } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import Button from '../components/Button';
 import Input from '../components/Input';
@@ -132,12 +132,12 @@ const Register: React.FC = () => {
                                         initial={{ width: 0 }}
                                         animate={{ width: `${(passwordStrength.score / 7) * 100}%` }}
                                         className={`h-full ${passwordStrength.score <= 2
-                                                ? 'bg-red-500'
-                                                : passwordStrength.score <= 4
-                                                    ? 'bg-orange-500'
-                                                    : passwordStrength.score <= 5
-                                                        ? 'bg-yellow-500'
-                                                        : 'bg-green-500'
+                                            ? 'bg-red-500'
+                                            : passwordStrength.score <= 4
+                                                ? 'bg-orange-500'
+                                                : passwordStrength.score <= 5
+                                                    ? 'bg-yellow-500'
+                                                    : 'bg-green-500'
                                             }`}
                                     />
                                 </div>

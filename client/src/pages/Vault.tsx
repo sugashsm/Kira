@@ -18,7 +18,6 @@ const Vault: React.FC = () => {
     const [passwords, setPasswords] = useState<Password[]>([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [isAddModalOpen, setIsAddModalOpen] = useState(false);
-    const [selectedPassword, setSelectedPassword] = useState<Password | null>(null);
     const [revealedPasswords, setRevealedPasswords] = useState<Set<string>>(new Set());
     const [loading, setLoading] = useState(true);
 
