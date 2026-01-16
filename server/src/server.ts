@@ -39,7 +39,8 @@ const authLimiter = rateLimit({
 const allowedOrigins = [
     'http://localhost:5173',
     'http://localhost:5174',
-    'http://localhost:5175'
+    'http://localhost:5175',
+    'https://kira-j7zr.vercel.app'  // Production frontend
 ];
 
 const corsOptions = {
