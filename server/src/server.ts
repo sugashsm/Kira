@@ -77,16 +77,19 @@ app.use('/api/passwords', passwordRoutes);
 app.use(notFound);
 app.use(errorHandler);
 
-// Start Server
+// Start Server (only in development, Vercel handles this in production)
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-    console.log('🚀 ========================================');
-    console.log(`🔐 KIRA Password Manager API`);
-    console.log(`📡 Server running on port ${PORT}`);
-    console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
-    console.log(`🔗 Health check: http://localhost:${PORT}/health`);
-    console.log('🚀 ========================================');
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log('🚀 ========================================');
+        console.log(`🔐 KIRA Password Manager API`);
+        console.log(`📡 Server running on port ${PORT}`);
+        console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
+        console.log(`🔗 Health check: http://localhost:${PORT}/health`);
+        console.log('🚀 ========================================');
+    });
+}
 
 export default app;
+
